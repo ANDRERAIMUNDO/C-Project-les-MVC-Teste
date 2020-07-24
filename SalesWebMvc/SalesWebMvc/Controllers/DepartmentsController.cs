@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 
+
 namespace SalesWebMvc.Controllers
 {
     public class DepartmentsController : Controller
