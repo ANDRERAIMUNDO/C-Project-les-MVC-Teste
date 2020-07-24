@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,7 +12,8 @@ namespace SalesWebMvc.Models
         public string Email { get; set; }
         public DateTime BrithDate { get; set; }
         public double BaseSalary { get; set; }
-        public Departament Departament { get; set; }
+        public Department Department { get; set; }
+        public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales = new List<SalesRecord>();
 
         public Seller()
@@ -20,14 +21,14 @@ namespace SalesWebMvc.Models
 
         }
 
-        public Seller(int id, string name, string email, DateTime brithDate, double baseSalary, Departament departament)
+        public Seller(int id, string name, string email, DateTime brithDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;
             Email = email;
             BrithDate = brithDate;
             BaseSalary = baseSalary;
-            Departament = departament;
+            Department = department;
         }
         public void AddSales (SalesRecord sr)
         {
